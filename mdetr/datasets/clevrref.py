@@ -8,9 +8,9 @@ import torch
 import torch.utils.data
 from transformers import RobertaTokenizerFast
 
-import util.dist as dist
-from datasets.clevr import make_clevr_transforms
-from util.box_ops import generalized_box_iou
+import mdetr.util.dist as dist
+from mdetr.datasets.clevr import make_clevr_transforms
+from mdetr.util.box_ops import generalized_box_iou
 
 from .coco import ModulatedDetection, make_coco_transforms
 

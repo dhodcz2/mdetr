@@ -7,7 +7,7 @@ from pathlib import Path
 
 from transformers import RobertaTokenizerFast
 
-from .coco import ModulatedDetection, make_coco_transforms
+from mdetr.datasets.coco import ModulatedDetection, make_coco_transforms
 
 
 class PhrasecutDetection(ModulatedDetection):

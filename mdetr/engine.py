@@ -11,15 +11,15 @@ import torch
 import torch.nn
 import torch.optim
 
-import util.dist as dist
-from datasets.clevrref import ClevrRefEvaluator
-from datasets.coco_eval import CocoEvaluator
-from datasets.flickr_eval import FlickrEvaluator
-from datasets.phrasecut_eval import PhrasecutEvaluator
-from datasets.refexp import RefExpEvaluator
-from util.metrics import MetricLogger, SmoothedValue
-from util.misc import targets_to
-from util.optim import adjust_learning_rate, update_ema
+import mdetr.util.dist as dist
+from mdetr.datasets.clevrref import ClevrRefEvaluator
+from mdetr.datasets.coco_eval import CocoEvaluator
+from mdetr.datasets.flickr_eval import FlickrEvaluator
+from mdetr.datasets.phrasecut_eval import PhrasecutEvaluator
+from mdetr.datasets.refexp import RefExpEvaluator
+from mdetr.util.metrics import MetricLogger, SmoothedValue
+from mdetr.util.misc import targets_to
+from mdetr.util.optim import adjust_learning_rate, update_ema
 
 
 def train_one_epoch(

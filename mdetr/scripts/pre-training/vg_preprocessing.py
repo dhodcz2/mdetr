@@ -16,17 +16,17 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 import torch
 from tqdm import tqdm
-from utils.boxes import box_iou_helper, combine_boxes, get_boxes_equiv, obj_to_box, region_to_box, xyxy_to_xywh
-from utils.dump import Annotation, Datapoint
-from utils.spans import (
+from mdetr.utils.boxes import box_iou_helper, combine_boxes, get_boxes_equiv, obj_to_box, region_to_box, xyxy_to_xywh
+from mdetr.utils.dump import Annotation, Datapoint
+from mdetr.utils.spans import (
     PreprocessError,
     consolidate_spans,
     get_canonical_spans,
     span_intersect_spanlist,
     spanlist_intersect_spanlist,
 )
-from utils.text import get_root_and_nouns, normalize_sentence, normalize_whitespace, simplify_punctuation
-from utils.unionfind import UnionFind
+from mdetr.utils.text import get_root_and_nouns, normalize_sentence, normalize_whitespace, simplify_punctuation
+from mdetr.utils.unionfind import UnionFind
 
 
 def parse_args():

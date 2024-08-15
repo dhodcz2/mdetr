@@ -12,8 +12,8 @@ import sys
 PACKAGE_PARENT = ".."
 SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
-from utils.spans import consolidate_spans
-from utils.text import get_root_and_nouns
+from mdetr.utils.spans import consolidate_spans
+from mdetr.utils.text import get_root_and_nouns
 
 
 def parse_args():

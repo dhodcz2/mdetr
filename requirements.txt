@@ -14,6 +14,7 @@ submitit
 tokenizers==0.13.2
 # mdetr breaks with any transformers>4.16.2
 transformers==4.16.2
-pycocotools @ git+ssh://git@github.com/cocodataset/cocoapi.git@master#egg=pycocotools&subdirectory=PythonAPI
+#pycocotools @ git+ssh://git@github.com/cocodataset/cocoapi.git@master#egg=pycocotools&subdirectory=PythonAPI
+pycocotools
 panopticapi @ git+ssh://git@github.com/cocodataset/panopticapi.git@master#egg=panopticapi
 timm

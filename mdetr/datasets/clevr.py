@@ -17,9 +17,9 @@ import torchvision
 from PIL import Image
 from transformers import RobertaTokenizerFast
 
-import datasets.transforms as T
+import mdetr.datasets.transforms as T
 
-from .coco import ConvertCocoPolysToMask, create_positive_map
+from mdetr.datasets.coco import ConvertCocoPolysToMask, create_positive_map
 
 ALL_ATTRIBUTES = [
     "small",

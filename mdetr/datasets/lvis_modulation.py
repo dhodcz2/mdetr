@@ -3,7 +3,7 @@ from pathlib import Path
 
 from transformers import RobertaTokenizerFast
 
-import datasets.transforms as T
+import mdetr.datasets.transforms as T
 
 from .coco import ModulatedDetection, make_coco_transforms
 

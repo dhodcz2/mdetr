@@ -11,7 +11,7 @@ import pycocotools.mask as mask_util
 import torch
 import torch._six
 
-import util.dist as dist
+import mdetr.util.dist as dist
 
 from .coco_eval import merge
 from .lvis import LVIS
@@ -447,8 +447,8 @@ class LVISEval:
                 tps = np.logical_and(dt_m, np.logical_not(dt_ig))
                 fps = np.logical_and(np.logical_not(dt_m), np.logical_not(dt_ig))
 
-                tp_sum = np.cumsum(tps, axis=1).astype(dtype=np.float)
-                fp_sum = np.cumsum(fps, axis=1).astype(dtype=np.float)
+                tp_sum = np.cumsum(tps, axis=1).astype(dtype=float)
+                fp_sum = np.cumsum(fps, axis=1).astype(dtype=float)
 
                 dt_pointers[cat_idx][area_idx] = {
                     "dt_ids": dt_ids,

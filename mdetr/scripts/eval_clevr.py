@@ -19,13 +19,13 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 import main as detection
-import util.dist as dist
-import util.misc as utils
-from datasets import build_dataset
-from datasets.clevr import ALL_ATTRIBUTES
+import mdetr.util.dist as dist
+import mdetr.util.misc as utils
+from mdetr.datasets import build_dataset
+from mdetr.datasets.clevr import ALL_ATTRIBUTES
 from engine import evaluate
-from models import build_model
-from util.metrics import MetricLogger
+from mdetr.models import build_model
+from mdetr.util.metrics import MetricLogger
 
 
 def local_get_args_parser():

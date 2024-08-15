@@ -3,7 +3,7 @@
 
 from typing import List, Tuple
 
-from .text import STOP_WORDS, nlp
+from mdetr.scripts.utils.text import STOP_WORDS, nlp
 
 
 class PreprocessError(Exception):

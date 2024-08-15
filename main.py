@@ -16,17 +16,17 @@ import torch
 import torch.utils
 from torch.utils.data import ConcatDataset, DataLoader, DistributedSampler
 
-import util.dist as dist
-import util.misc as utils
-from datasets import build_dataset, get_coco_api_from_dataset
-from datasets.clevrref import ClevrRefEvaluator
-from datasets.coco_eval import CocoEvaluator
-from datasets.flickr_eval import FlickrEvaluator
-from datasets.phrasecut_eval import PhrasecutEvaluator
-from datasets.refexp import RefExpEvaluator
+import mdetr.util.dist as dist
+import mdetr.util.misc as utils
+from mdetr.datasets import build_dataset, get_coco_api_from_dataset
+from mdetr.datasets.clevrref import ClevrRefEvaluator
+from mdetr.datasets.coco_eval import CocoEvaluator
+from mdetr.datasets.flickr_eval import FlickrEvaluator
+from mdetr.datasets.phrasecut_eval import PhrasecutEvaluator
+from mdetr.datasets.refexp import RefExpEvaluator
 from engine import evaluate, train_one_epoch
-from models import build_model
-from models.postprocessors import build_postprocessors
+from mdetr.models import build_model
+from mdetr.models.postprocessors import build_postprocessors
 
 
 def get_args_parser():

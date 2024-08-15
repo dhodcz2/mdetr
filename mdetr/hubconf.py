@@ -1,12 +1,12 @@
 # Copyright (c) Aishwarya Kamath & Nicolas Carion. Licensed under the Apache License 2.0. All Rights Reserved
 import torch
 
-from models.backbone import Backbone, Joiner, TimmBackbone
-from models.mdetr import MDETR
-from models.position_encoding import PositionEmbeddingSine
-from models.postprocessors import PostProcess, PostProcessSegm
-from models.segmentation import DETRsegm
-from models.transformer import Transformer
+from mdetr.models.backbone import Backbone, Joiner, TimmBackbone
+from mdetr.models.mdetr import MDETR
+from mdetr.models.position_encoding import PositionEmbeddingSine
+from mdetr.models.postprocessors import PostProcess, PostProcessSegm
+from mdetr.models.segmentation import DETRsegm
+from mdetr.models.transformer import Transformer
 
 dependencies = ["torch", "torchvision"]
 

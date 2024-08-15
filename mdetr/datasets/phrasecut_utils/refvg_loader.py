@@ -17,8 +17,8 @@ import random
 
 import numpy as np
 
-from .data_transfer import polygons_to_mask
-from .subset import PhraseCutSubsets
+from mdetr.datasets.phrasecut_utils.data_transfer import polygons_to_mask
+from mdetr.datasets.phrasecut_utils.subset import PhraseCutSubsets
 
 
 class RefVGLoader(object):

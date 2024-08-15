@@ -20,8 +20,8 @@ import sys
 PACKAGE_PARENT = ".."
 SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
 sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
-from utils.dump import Annotation, Datapoint, convert2dataset_combined
-from utils.spans import consolidate_spans, shift_spans
+from mdetr.utils.dump import Annotation, Datapoint, convert2dataset_combined
+from mdetr.utils.spans import consolidate_spans, shift_spans
 
 
 def parse_args():

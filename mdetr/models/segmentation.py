@@ -7,8 +7,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from models.backbone import TimmBackbone
-from util.misc import NestedTensor
+from mdetr.models.backbone import TimmBackbone
+from mdetr.util.misc import NestedTensor
 
 
 class DETRsegm(nn.Module):
