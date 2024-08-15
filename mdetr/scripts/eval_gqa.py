@@ -111,7 +111,7 @@ def main(args):
             checkpoint = torch.hub.load_state_dict_from_url(args.resume, map_location="cpu", check_hash=True)
         else:
             checkpoint = torch.load(args.resume, map_location="cpu")
-        model_without_ddp.load_state_dict(checkpoint["model"])
+        model_without_ddp.model.load_state_dict(checkpoint["model"], strict=False)
         if args.ema:
             if "model_ema" not in checkpoint:
                 print("WARNING: ema model not found in checkpoint, resetting to current model")

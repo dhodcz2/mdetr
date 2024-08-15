@@ -69,7 +69,7 @@ def mdetr_resnet101(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -88,7 +88,7 @@ def mdetr_efficientnetB3(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -107,7 +107,7 @@ def mdetr_efficientnetB5(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -124,7 +124,7 @@ def mdetr_clevr(pretrained=False, return_postprocessor=False):
         checkpoint = torch.hub.load_state_dict_from_url(
             url="https://zenodo.org/record/4721981/files/clevr_checkpoint.pth", map_location="cpu", check_hash=True
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -143,7 +143,7 @@ def mdetr_clevr_humans(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -162,7 +162,7 @@ def mdetr_resnet101_gqa(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -179,7 +179,7 @@ def mdetr_efficientnetB5_gqa(pretrained=False, return_postprocessor=False):
         checkpoint = torch.hub.load_state_dict_from_url(
             url="https://zenodo.org/record/4721981/files/gqa_EB5_checkpoint.pth", map_location="cpu", check_hash=True
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -197,7 +197,7 @@ def mdetr_resnet101_phrasecut(pretrained=False, threshold=0.5, return_postproces
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, [PostProcess(), PostProcessSegm(threshold=threshold)]
     return model
@@ -215,7 +215,7 @@ def mdetr_efficientnetB3_phrasecut(pretrained=False, threshold=0.5, return_postp
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, [PostProcess(), PostProcessSegm(threshold=threshold)]
     return model
@@ -233,7 +233,7 @@ def mdetr_resnet101_refcoco(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -251,7 +251,7 @@ def mdetr_efficientnetB3_refcoco(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -269,7 +269,7 @@ def mdetr_resnet101_refcocoplus(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -287,7 +287,7 @@ def mdetr_efficientnetB3_refcocoplus(pretrained=False, return_postprocessor=Fals
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -305,7 +305,7 @@ def mdetr_resnet101_refcocog(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model
@@ -323,7 +323,7 @@ def mdetr_efficientnetB3_refcocog(pretrained=False, return_postprocessor=False):
             map_location="cpu",
             check_hash=True,
         )
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     if return_postprocessor:
         return model, PostProcess()
     return model

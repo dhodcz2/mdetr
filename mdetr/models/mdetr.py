@@ -121,6 +121,8 @@ class MDETR(nn.Module):
            - "aux_outputs": Optional, only returned when auxilary losses are activated. It is a list of
                             dictionnaries containing the two above keys for each decoder layer.
         """
+        print('FORWARD!!!')
+        raise Exception
         if not isinstance(samples, NestedTensor):
             samples = NestedTensor.from_tensor_list(samples)
 
@@ -825,3 +827,5 @@ def build(args):
     else:
         qa_criterion = None
     return model, criterion, contrastive_criterion, qa_criterion, weight_dict
+
+MDETR.__call__

@@ -81,7 +81,7 @@ def main(args):
         assert "model_ema" in checkpoint
         model.load_state_dict(checkpoint["model_ema"])
     else:
-        model.load_state_dict(checkpoint["model"])
+        model.model.load_state_dict(checkpoint["model"], strict=False)
     model.to(device)
 
     model_without_ddp = model
