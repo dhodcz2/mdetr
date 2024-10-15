@@ -1,6 +1,7 @@
 #torch>=1.7.0,<1.9.0
 # requirements.txt
-torch==1.8.1+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+#torch==1.8.1+cu102 -f https://download.pytorch.org/whl/torch_stable.html
+torch
 
 numpy
 torchvision>=0.6.0
