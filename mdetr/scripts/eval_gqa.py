@@ -58,7 +58,7 @@ def main(args):
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    torch.set_deterministic(True)
+    torch.use_deterministic_algorithms(True)
 
     model, criterion, _, _, _ = build_model(args)
     model.to(device)

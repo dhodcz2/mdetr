@@ -61,7 +61,7 @@ def main(args):
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    torch.set_deterministic(True)
+    torch.use_deterministic_algorithms(True)
 
     if args.resume.startswith("https"):
         checkpoint = torch.hub.load_state_dict_from_url(args.resume, map_location="cpu", check_hash=True)

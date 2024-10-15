@@ -829,4 +829,3 @@ def build(args):
     return model, criterion, contrastive_criterion, qa_criterion, weight_dict
 
 
-MDETR.__call__

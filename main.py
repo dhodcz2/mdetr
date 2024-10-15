@@ -24,7 +24,7 @@ from mdetr.datasets.coco_eval import CocoEvaluator
 from mdetr.datasets.flickr_eval import FlickrEvaluator
 from mdetr.datasets.phrasecut_eval import PhrasecutEvaluator
 from mdetr.datasets.refexp import RefExpEvaluator
-from engine import evaluate, train_one_epoch
+from mdetr.engine import evaluate, train_one_epoch
 from mdetr.models import build_model
 from mdetr.models.postprocessors import build_postprocessors
 
@@ -306,7 +306,7 @@ def main(args):
     torch.manual_seed(seed)
     np.random.seed(seed)
     random.seed(seed)
-    torch.set_deterministic(True)
+    torch.use_deterministic_algorithms(True)
 
     # Build the model
     model, criterion, contrastive_criterion, qa_criterion, weight_dict = build_model(args)
