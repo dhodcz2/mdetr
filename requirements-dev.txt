@@ -1,0 +1,18 @@
+timm
+torch
+numpy
+torchvision>=0.6.0
+cython
+scipy
+xmltodict
+tqdm
+onnx
+onnxruntime
+prettytable
+submitit
+# mdetr breaks with tokenizers >= 0.14
+tokenizers==0.13.2
+# mdetr breaks with any transformers>4.16.2
+transformers==4.16.2
+pycocotools
+#panopticapi @ git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi
