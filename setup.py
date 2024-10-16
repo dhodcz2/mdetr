@@ -6,10 +6,10 @@ with open('requirements.txt') as f:
 
 setup(
     name="mdetr",
-    packages=find_packages(include=[
-        'mdetr',
-        'mdetr.*',
-    ]),
+    # packages=find_packages(include=[
+    #     'mdetr',
+    #     'mdetr.*',
+    # ]),
     classifiers=[
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3.11",

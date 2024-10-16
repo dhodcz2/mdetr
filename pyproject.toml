@@ -1,3 +1,17 @@
+[project]
+name = "mdetr"
+version = "0.0.1"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+
 [build-system]
 requires = ["setuptools>=42", "wheel", "torch"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements-dev.txt"] }
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mdetr*"]
