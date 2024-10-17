@@ -15,4 +15,4 @@ tokenizers==0.13.2
 # mdetr breaks with any transformers>4.16.2
 transformers==4.16.2
 pycocotools
-#panopticapi @ git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi
+panopticapi @ git+https://github.com/cocodataset/panopticapi.git#egg=panopticapi
